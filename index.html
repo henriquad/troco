@@ -1,0 +1,1934 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/Moedas.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="TrocoEstilos.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <title>Extrato</title>
+</head>
+
+<body>
+
+
+    <h2 style="text-align: left;padding: 12px;">Cálculo da Quantidade de Notas e Moedas</h2>
+
+    <form id="form1">
+
+        <table>
+            <tr>
+                <td>
+
+
+                    <span class="tooltip">
+                        <button type="button" onclick="calcular()" style="border: none; cursor: pointer;">
+                            <img src="images/Calc.gif" alt="" style="height: 55px; width: 55px;">
+                            <span class="tooltip-text">calcular</span>
+                    </span>
+
+                <td>
+                    <label for="Total">Total R$</label>
+                    <input type="text" id="Total" name="Total" disabled="True" class="CxTotal">
+
+
+                </td>
+                <td>
+                    <img ID="Image200" src="images/Nota_200.jpg" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image1" src="images/Nota_100.png" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image2" src="images/Nota_50.png" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image4" src="images/Nota_20.png" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image5" src="images/Nota_10.png" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image6" src="images/Nota_5.png" Height="55px" Width="100px" />
+                </td>
+                <td>
+                    <img ID="Image7" src="images/Nota_2.png" Height="55px" Width="100px" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image13" src="images/Moeda_100.png" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image10" src="images/Moeda_50.png" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image8" src="images/Moeda_25.png" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image11" src="images/Moeda_10.png" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image12" src="images/Moeda_5.png" />
+                </td>
+                <td class="auto-style2">
+                    <img ID="Image3" src="images/Moeda_1.png" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+
+                    <span class="tooltip">
+                        <button type="button" onclick="limpar()" style="border: none; cursor: pointer;">
+                            <img src="images/delete_icon-64.jpg" alt="" style="height: 45px; width: 45px;">
+                            <span class="tooltip-text">limpar todos os valores</span>
+                    </span>
+
+                </td>
+                <td>
+                    <label>Quantidades</label>
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3000" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3001" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3002" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3003" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3004" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3005" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3006" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3007" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3008" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3009" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3010" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3011" class="cxQtde" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox3012" class="cxQtde" readonly="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+
+                    <span class="tooltip">
+                        <label onclick="limparAjustes()">Ajustes +-</label>
+                        <span class="tooltip-text">clique p/ limpar ajustes</span>
+                    </span>
+
+
+
+                </td>
+
+                <td>
+                    <input type="text" ID="TextBox4000" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4001" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4002" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4003" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4004" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4005" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4006" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4007" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4008" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4009" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4010" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4011" class="CxAjustes">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox4012" class="CxAjustes">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        <button type="button" onclick="repetir()" style="border: none; cursor: pointer; ">
+                            <img src="images/repita.png" alt="" style="height: 35px; width: 35px;">
+                            <span class="tooltip-text">repete o valor</span>
+                    </span>
+
+
+
+
+                </td>
+                <td>
+                    <label>Totais R$</label>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5000" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5001" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5002" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5003" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5004" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5005" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5006" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5007" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5008" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5009" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5010" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5011" class="CxTotal" readonly="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox5012" class="CxTotal" readonly="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="tooltip">
+                        <label style="cursor:pointer;" onclick="document.getElementById('TextBox015').value = '';">1º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox015" class="CxValor1" placeholder="Digite aqui" autofocus
+                        onclick="guardar(15)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox016" class="CxValor" readonly="True" disabled="True">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox017" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox018" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox019" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox020" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox021" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox022" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox023" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox024" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox025" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox026" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox027" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox028" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox029').value = '';">2º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox029" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(29) ">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox030" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox031" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox032" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox033" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox034" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox035" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox036" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox037" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox038" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox039" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox040" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox041" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox042" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox043').value = '';">3º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox043" class="CxValor1" placeholder="Digite aqui" onclick="guardar(43)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox044" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox045" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox046" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox047" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox048" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox049" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox050" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox051" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox052" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox053" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox054" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox055" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox056" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox057').value = '';">4º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+                </td>
+
+                <td>
+                    <input type="text" ID="TextBox057" class="CxValor1" placeholder="Digite aqui" onclick="guardar(57)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox058" class="CxValor" readonly="True" disabled="True">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox059" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox060" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox061" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox062" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox063" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox064" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox065" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox066" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox067" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox068" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox069" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox070" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox071').value = '';">5º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox071" class="CxValor1" placeholder="Digite aqui" onclick="guardar(71)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox072" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox073" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox074" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox075" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox076" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox077" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox078" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox079" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox080" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox081" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox082" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox083" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox084" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox085').value = '';">6º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox085" class="CxValor1" placeholder="Digite aqui" onclick="guardar(85)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox086" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox087" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox088" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox089" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox090" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox091" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox092" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox093" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox094" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox095" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox096" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox097" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox098" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox099').value = '';">7º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox099" class="CxValor1" placeholder="Digite aqui" onclick="guardar(99)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox100" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox101" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox102" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox103" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox104" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox105" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox106" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox107" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox108" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox109" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox110" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox111" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox112" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox113').value = '';">8º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox113" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(113)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox114" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox115" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox116" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox117" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox118" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox119" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox120" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox121" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox122" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox123" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox124" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox125" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox126" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox127').value = '';">9º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox127" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(127)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox128" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox129" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox130" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox131" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox132" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox133" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox134" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox135" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox136" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox137" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox138" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox139" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox140" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox141').value = '';">10º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox141" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(141)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox142" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox143" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox144" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox145" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox146" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox147" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox148" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox149" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox150" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox151" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox152" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox153" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox154" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox155').value = '';">11º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox155" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(155)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox156" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox157" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox158" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox159" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox160" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox161" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox162" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox163" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox164" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox165" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox166" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox167" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox168" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox169').value = '';">12º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox169" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(169)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox170" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox171" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox172" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox173" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox174" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox175" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox176" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox177" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox178" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox179" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox180" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox181" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox182" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox183').value = '';">13º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox183" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(183)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox184" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox185" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox186" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox187" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox188" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox189" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox190" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox191" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox192" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox193" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox194" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox195" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox196" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox197').value = '';">14º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox197" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(197)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox198" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox199" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox200" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox201" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox202" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox203" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox204" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox205" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox206" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox207" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox208" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox209" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox210" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox211').value = '';">15º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox211" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(211)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox212" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox213" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox214" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox215" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox216" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox217" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox218" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox219" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox220" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox221" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox222" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox223" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox224" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox225').value = '';">16º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox225" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(225)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox226" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox227" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox228" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox229" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox230" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox231" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox232" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox233" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox234" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox235" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox236" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox237" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox238" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox239').value = '';">17º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox239" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(239)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox240" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox241" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox242" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox243" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox244" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox245" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox246" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox247" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox248" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox249" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox250" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox251" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox252" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox253').value = '';">18º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox253" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(253)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox254" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox255" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox256" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox257" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox258" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox259" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox260" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox261" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox262" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox263" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox264" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox265" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox266" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox267').value = '';">19º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox267" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(267)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox268" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox269" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox270" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox271" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox272" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox273" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox274" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox275" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox276" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox277" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox278" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox279" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox280" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox281').value = '';">20º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox281" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(281)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox282" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox283" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox284" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox285" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox286" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox287" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox288" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox289" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox290" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox291" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox292" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox293" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox294" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox295').value = '';">21º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox295" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(295)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox296" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox297" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox298" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox299" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox300" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox301" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox302" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox303" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox304" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox305" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox306" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox307" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox308" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox309').value = '';">22º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox309" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(309)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox310" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox311" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox312" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox313" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox314" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox315" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox316" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox317" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox318" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox319" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox320" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox321" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox322" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox323').value = '';">23º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox323" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(323)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox324" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox325" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox326" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox327" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox328" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox329" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox330" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox331" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox332" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox333" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox334" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox335" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox336" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox337').value = '';">24º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox337" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(337)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox338" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox339" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox340" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox341" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox342" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox343" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox344" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox345" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox346" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox347" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox348" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox349" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox350" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+
+                    <span class="tooltip">
+                        8<label style="cursor:pointer;" onclick="document.getElementById('TextBox351').value = '';">25º</label>
+                        <span class="tooltip-text">limpar valor digitado</span>
+                    </span>
+                </td>
+                <td>
+                    <input type="text" ID="TextBox351" class="CxValor1" placeholder="Digite aqui"
+                        onclick="guardar(351)">
+                </td>
+                <td>
+                    <input type="text" ID="TextBox352" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox353" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox354" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox355" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox356" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox357" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox358" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox359" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox360" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox361" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox362" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox363" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+                <td>
+                    <input type="text" ID="TextBox364" class="CxValor" readonly="True" disabled="True">
+
+                </td>
+            </tr>
+
+        </table>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>

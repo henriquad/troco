@@ -1,0 +1,95 @@
+﻿* {
+  background-color: black;
+  margin: 0;
+}
+body {
+  font-family: Calibri Light;
+  font-size: medium;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  color: white;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+}
+
+input {
+  width: 90px;
+}
+
+.CxValor {
+  text-align: right;
+  width: 90px;
+  color: white;
+  border-color: rgb(0, 5, 14);
+  font-size: 16px;
+}
+
+.CxValor1 {
+  text-align: right;
+  width: 90px;
+  color: white;
+  border-color: rgb(0, 5, 14);
+  font-size: 18px;
+}
+
+.CxAjustes {
+  text-align: right;
+  width: 90px;
+  color: white;
+  font-size: 16px;
+}
+
+.CxTotal {
+  text-align: right;
+  width: 90px;
+  font-size: 14px;
+  color: white;
+  background-color: rgb(23, 13, 105);
+}
+
+.cxQtde {
+  text-align: right;
+  width: 100px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(23, 13, 105);
+  font-size: 16px;
+}
+
+td {
+  width: 120px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+
+  left: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
